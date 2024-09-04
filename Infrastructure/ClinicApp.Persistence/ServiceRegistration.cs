@@ -23,7 +23,7 @@ namespace ClinicApp.Persistence
             services.AddScoped<IPatientReadRepository,PatientReadRepository>();
             services.AddScoped<IPatientWriteRepository,PatientWriteRepository>();
 
-            services.AddScoped<IDoctorReadRepository,DoctorReadRepository>();
+            services.AddScoped<IReadRepository,DoctorReadRepository>();
             services.AddScoped<IDoctorWriteRepository,DoctorWriteRepository>();
 
         }

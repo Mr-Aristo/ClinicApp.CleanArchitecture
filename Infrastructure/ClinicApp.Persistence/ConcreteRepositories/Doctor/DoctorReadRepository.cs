@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace ClinicApp.Persistence.ConcreteRepositories
 {
-    public class DoctorReadRepository : ReadRepository<Doctors>,IDoctorReadRepository
+    public class DoctorReadRepository : ReadRepository<Doctors>,IReadRepository
     {
         private ClinicAppContext _context;
         public DoctorReadRepository(ClinicAppContext context):base (context)
