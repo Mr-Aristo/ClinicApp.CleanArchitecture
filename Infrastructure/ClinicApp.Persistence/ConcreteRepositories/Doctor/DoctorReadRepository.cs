@@ -25,7 +25,7 @@ namespace ClinicApp.Persistence.ConcreteRepositories
             switch (sortField.ToLower())
             {
                 case "specialization":
-                    query = query.OrderBy(d => d.Specialization);
+                    query = query.OrderBy(d => d.Sections);
                     break;
                 default:
                     query = query.OrderBy(d => d.Name);

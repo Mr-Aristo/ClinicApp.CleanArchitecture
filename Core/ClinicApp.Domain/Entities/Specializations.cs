@@ -11,9 +11,7 @@ namespace ClinicApp.Domain.Entities
 {
     public class Specializations : BaseEntity
     {
-
-        [Required]
-        [MaxLength(100)]
+               
         public string Name { get; set; }
 
         public ICollection<Doctors> Doctors { get; set; }

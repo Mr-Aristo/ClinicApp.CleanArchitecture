@@ -19,25 +19,26 @@ namespace ClinicApp.Persistence.ConcreteRepositories
         }
         public async Task<IEnumerable<Patients>> GetPatientsAsync(string sortField, int page, int pageSize)
         {
-            var query = _context.Patients.Include(p => p.Doctor).AsQueryable();
+            //var query = _context.Patients.Include(p => p.Doctor).AsQueryable();
 
-            switch (sortField.ToLower())
-            {
-                case "age":
-                    query = query.OrderBy(p => p.Age);
-                    break;
-                case "doctorname":
-                    query = query.OrderBy(p => p.Doctor.Name);
-                    break;
-                default:
-                    query = query.OrderBy(p => p.Name);
-                    break;
-            }
+            //switch (sortField.ToLower())
+            //{
+            //    case "age":
+            //        query = query.OrderBy(p => p.Age);
+            //        break;
+            //    case "doctorname":
+            //        query = query.OrderBy(p => p.Doctor.Name);
+            //        break;
+            //    default:
+            //        query = query.OrderBy(p => p.Name);
+            //        break;
+            //}
 
-            return await query
-                .Skip((page - 1) * pageSize)
-                .Take(pageSize)
-                .ToListAsync();
+            //return await query
+            //    .Skip((page - 1) * pageSize)
+            //    .Take(pageSize)
+            //    .ToListAsync();
+            throw new NotImplementedException();    
         }
     }
 }

@@ -18,11 +18,7 @@ namespace ClinicApp.Domain.Entities
 
         public Guid SectionId { get; set; }
         public Sections Sections { get; set; }
-
-        public ICollection<Patients> Patients
-        {
-            get; set;
-        }
+               
     }
 }
 
