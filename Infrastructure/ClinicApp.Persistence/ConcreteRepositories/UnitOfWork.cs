@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using ClinicApp.Application.AbstrasctRepositories;
+﻿using ClinicApp.Application.AbstrasctRepositories;
 using ClinicApp.Application.AbstrasctRepositories.Cabine;
 using ClinicApp.Application.AbstrasctRepositories.Doctor;
 using ClinicApp.Application.AbstrasctRepositories.Patience;
@@ -36,7 +31,7 @@ namespace ClinicApp.Persistence.ConcreteRepositories
             _context = context ?? throw new ArgumentNullException(nameof(context));
         }
 
-        public IReadRepository DoctorReadRepository
+        public IDoctorReadRepository DoctorReadRepository
         {
             get => _doctorReadRepository ??= new DoctorReadRepository(_context);
         }

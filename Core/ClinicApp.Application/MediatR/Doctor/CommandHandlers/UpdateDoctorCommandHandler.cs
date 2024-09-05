@@ -19,25 +19,24 @@ namespace ClinicApp.Application.MediatR.Doctor.CommandHandlers
         }
         async Task IRequestHandler<UpdateDoctorCommand>.Handle(UpdateDoctorCommand request, CancellationToken cancellationToken)
         {
-            // Retrieve the existing doctor entity
+            
             var doctor = await _unitOfWork.DoctorReadRepository.GetByIdAsync(request.Id, tracking: false);
             if (doctor == null)
             {
                 throw new KeyNotFoundException("Doctor not found");
             }
 
-            // Update the doctor's properties with the values from the request
+          
             doctor.Name = request.Name;
-            doctor.Specialization = request.Specialization;
-
-            // Update the entity in the database
+          
+       
             var updated = _unitOfWork.DoctorWriteRepository.Update(doctor);
             if (!updated)
             {
                 throw new Exception("Failed to update the doctor");
             }
 
-            // Save changes to the database
+         
             await _unitOfWork.SaveAsync();
 
         }

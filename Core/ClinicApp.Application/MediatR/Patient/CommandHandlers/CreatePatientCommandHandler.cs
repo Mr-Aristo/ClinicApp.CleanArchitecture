@@ -25,8 +25,12 @@ namespace ClinicApp.Application.MediatR.Patient.CommandHandlers
             var patient = new Patients
             {
                 Name = request.Name,
+                Surname = request.Surname,
+                MiddleName = request.MiddleName,
+                SectionId = Guid.Parse(request.SectionId),
                 Age = request.Age,
-                DoctorId = request.DoctorId
+                Adres = request.Adres
+
             };
 
             await _unitOfWork.PatientWriteRepository.AddAsync(patient);
@@ -37,7 +41,7 @@ namespace ClinicApp.Application.MediatR.Patient.CommandHandlers
                 Id = patient.Id.ToString(),
                 Name = patient.Name,
                 Age = patient.Age,
-                DoctorId = patient.DoctorId
+                
             };
         }
     }

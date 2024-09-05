@@ -25,7 +25,7 @@ namespace ClinicApp.Application.MediatR.Patient.CommandHandlers
 
             patient.Name = request.Name;
             patient.Age = request.Age;
-            patient.DoctorId = request.DoctorId;
+           
 
             _unitOfWork.PatientWriteRepository.Update(patient);
             await _unitOfWork.SaveAsync();

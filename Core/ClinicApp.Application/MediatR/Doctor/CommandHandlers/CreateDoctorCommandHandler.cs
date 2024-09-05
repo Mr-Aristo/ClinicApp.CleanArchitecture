@@ -25,7 +25,9 @@ namespace ClinicApp.Application.MediatR.Doctor.CommandHandlers
             var doctor = new Doctors
             {
                 Name = request.Name,
-                Specialization = request.Specialization
+                SpecializationId = Guid.Parse(request.SpecializationId),
+                Cabine = Guid.Parse(request.CabineId),
+                SectionId = Guid.Parse(request.SectionId)
             };
 
             await _unitOfWork.DoctorWriteRepository.AddAsync(doctor);
@@ -34,8 +36,7 @@ namespace ClinicApp.Application.MediatR.Doctor.CommandHandlers
             return new DoctorDto
             {
                 Id = doctor.Id.ToString(),
-                Name = doctor.Name,
-                Specialization = doctor.Specialization
+                Name = doctor.Name                
             };
         }
     }

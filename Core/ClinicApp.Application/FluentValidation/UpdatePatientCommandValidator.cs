@@ -21,8 +21,13 @@ namespace ClinicApp.Application.FluentValidation
                 .GreaterThan(0).WithMessage("Age must be greater than 0.")
                 .LessThanOrEqualTo(120).WithMessage("Age must be 120 or less.");
 
-            RuleFor(x => x.DoctorId)
-                .GreaterThan(0).WithMessage("DoctorId is required.");
+            RuleFor(x => x.Surname)
+               .NotEmpty().WithMessage("Surname is required.")
+               .MaximumLength(100).WithMessage("Surname must not exceed 100 characters.");
+
+            RuleFor(x => x.Adres)
+                .NotEmpty().WithMessage("Surname is required.")
+                .MaximumLength(100).WithMessage("Surname must not exceed 100 characters.");
         }
     }
 }

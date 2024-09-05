@@ -13,7 +13,7 @@ namespace ClinicApp.Persistence
             {
 
                 ConfigurationManager configurationManager = new();                             // ../ bir geri cikma anlamina gelir.
-                configurationManager.SetBasePath(Path.Combine(Directory.GetCurrentDirectory(), "../../Presentation/E-ClinicApp.API"));
+                configurationManager.SetBasePath(Path.Combine(Directory.GetCurrentDirectory(), "../../Presentation/ClinicApp.API"));
           
                 configurationManager.AddJsonFile("appsettings.json");
                                               

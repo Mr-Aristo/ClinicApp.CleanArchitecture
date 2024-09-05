@@ -26,7 +26,7 @@ namespace ClinicApp.Application.MediatR.Doctor.QueryHandlers
             {
                 Id = d.Id.ToString(),
                 Name = d.Name,
-                Specialization = d.Specialization
+                SpecializationId = d.SpecializationId.ToString()
             }).ToList();
         }
     }

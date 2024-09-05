@@ -20,7 +20,7 @@ namespace ClinicApp.Persistence
            
              dbContextOptions.UseSqlServer(DataBaseConfiguration.ConnectionString);
 
-            return new ClinicAppContext(dbContextOptions.Options); // read me de yazdigi gibi artik context const. ne alacagini biliyor
+            return new ClinicAppContext(dbContextOptions.Options); 
         }
     }
 }

@@ -11,7 +11,9 @@ namespace ClinicApp.Application.MediatR.Doctor.Commands
     {
         public string Id { get; set; }
         public string Name { get; set; }
-        public string Specialization { get; set; }
+        public string SpecializationId { get; set; }
+        public string CabineId { get; set; }
+        public string SectionId { get; set; }
     }
 
 }

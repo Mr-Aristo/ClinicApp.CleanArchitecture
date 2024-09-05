@@ -15,7 +15,7 @@ namespace ClinicApp.Application.AbstrasctRepositories.UnitOfWork
 {
     public interface IUnitOfWork:IDisposable
     {
-        IReadRepository DoctorReadRepository { get; }
+        IDoctorReadRepository DoctorReadRepository { get; }
         IDoctorWriteRepository DoctorWriteRepository { get; set; }
 
         IPatientReadRepository PatientReadRepository { get; }

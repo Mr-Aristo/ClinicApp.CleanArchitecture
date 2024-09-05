@@ -9,7 +9,7 @@ using ClinicApp.Domain.Entities;
 
 namespace ClinicApp.Application.AbstrasctRepositories
 {
-    public interface IReadRepository : IReadRepository<Doctors>
+    public interface IDoctorReadRepository : IReadRepository<Doctors>
     {
         Task<IEnumerable<Doctors>> GetDoctorsAsync(string sortField, int page, int pageSize);
     }

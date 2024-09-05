@@ -13,4 +13,4 @@ namespace ClinicApp.Application.AbstrasctRepositories.Patience
         Task<IEnumerable<Patients>> GetPatientsAsync(string sortField, int page, int pageSize);
     }
 }
-}
+

@@ -26,8 +26,11 @@ namespace ClinicApp.Application.MediatR.Patient.QueryHandlers
             {
                 Id = p.Id.ToString(),
                 Name = p.Name,
+                Surname = p.Surname,
+                MiddleName = p.MiddleName,
                 Age = p.Age,
-                //Doctor.nam = p.Doctor.Name
+                Adres = p.Adres,
+                Sex = p.Sex
             }).ToList();
         }
 
